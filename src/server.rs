@@ -1,10 +1,14 @@
 use std::sync::Mutex;
 use tonic::{transport::Server, Request, Response, Status};
 use todo::todo_server::{TodoServer, Todo};
-use todo::{TodoItem, GetTodosResponse, CreateTodoRequest, CreateTodoResponse};
+use types::{TodoItem, GetTodosResponse, CreateTodoRequest, CreateTodoResponse};
 
 pub mod todo {
     tonic::include_proto!("todo");
+}
+
+pub mod types {
+    tonic::include_proto!("types");
 }
 
 #[derive(Debug, Default)]

@@ -1,8 +1,12 @@
 use todo::todo_client::TodoClient;
-use todo::{CreateTodoRequest};
+use types::{CreateTodoRequest};
 
 pub mod todo {
     tonic::include_proto!("todo");
+}
+
+pub mod types {
+    tonic::include_proto!("types");
 }
 
 #[tokio::main]
