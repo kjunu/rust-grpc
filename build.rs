@@ -1,7 +1,7 @@
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let proto_files = vec![
         "proto/todo.proto",
-        "proto/types.proto"
+        "proto/types/messages.proto"
     ]
     .iter()
     .map(|name| std::env::current_dir().unwrap().join(name))
